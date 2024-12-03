@@ -17,13 +17,14 @@ $mobileBreakpoint: calc(1000rem / 16);
   font-family: Lato;
   --colorLight: #fff;
   --colorLightGrey: #8c9597;
-  --colorDark: #1d2130;
+  --colorDark: #000;
   --colorDarker: #0b0706;
   --colorPrimary: #32b4ec;
   --colorSectionDark: #1f3136;
   --sectionGap: 4rem;
+
   color: var(--colorDark);
-  line-height: 1.2;
+  line-height: 1.5;
   @media (max-width: 1000px) {
     --sectionGap: 2rem;
   }
@@ -119,15 +120,15 @@ main > section:first-of-type {
 }
 
 .h1 {
-  @include ScalingFont(50, 32, 1440);
-  font-weight: 400;
+  @include ScalingFont(18, 16, 1440);
+  font-weight: 700;
 }
 p {
   margin-block: 2rem;
-  @include ScalingFont(20, 16, 1440);
+  @include ScalingFont(16, 12, 1440);
 }
 ul {
-  @include ScalingFont(20, 16, 1440);
+  @include ScalingFont(16, 12, 1440);
   margin-inline-start: 1.25rem;
   li {
     margin-block: 0.75rem;
@@ -135,10 +136,10 @@ ul {
 }
 ol {
   margin-inline-start: 1.25rem;
-  @include ScalingFont(20, 16, 1440);
+  @include ScalingFont(16, 12, 1440);
   ::marker {
     font-weight: 600;
-    @include ScalingFont(20, 16, 1440);
+    @include ScalingFont(16, 12, 1440);
   }
   li {
     margin-block: 1rem;
@@ -152,7 +153,7 @@ ol {
   }
 }
 strong {
-  @include ScalingFont(20, 16, 1440);
+  @include ScalingFont(16, 12, 1440);
 }
 .banner {
   min-height: 100vh;
@@ -216,7 +217,7 @@ strong {
   // display: grid;
   // place-content: center;
   img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }
@@ -226,7 +227,7 @@ strong {
   gap: 2rem;
 
   @media (min-width: #{$mobileBreakpoint}) {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 4fr 5fr;
   }
   @media (max-width: #{$mobileBreakpoint}) {
     .imgWrapper {
@@ -245,7 +246,7 @@ strong {
   .txtWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     gap: 2rem;
     p {
       margin-block: 0;
@@ -261,7 +262,7 @@ strong {
 
 .h1.boldsmallcenter {
   font-weight: 700;
-  @include ScalingFont(38, 28, 1440);
+  @include ScalingFont(18, 16, 1440);
   text-align: center;
 }
 
@@ -410,6 +411,6 @@ ol.moreInside {
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
   p {
-    @include ScalingFont(40, 24, 1440);
+    @include ScalingFont(18, 16, 1440);
   }
 }

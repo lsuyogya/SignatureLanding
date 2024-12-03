@@ -62,13 +62,13 @@
   font-family: Lato;
   --colorLight: #fff;
   --colorLightGrey: #8c9597;
-  --colorDark: #1d2130;
+  --colorDark: #000;
   --colorDarker: #0b0706;
   --colorPrimary: #32b4ec;
   --colorSectionDark: #1f3136;
   --sectionGap: 4rem;
   color: var(--colorDark);
-  line-height: 1.2;
+  line-height: 1.5;
 }
 @media (max-width: 1000px) {
   :root {
@@ -173,17 +173,17 @@ main > section:first-of-type {
 }
 
 .h1 {
-  font-size: clamp(2rem, 5.4722222222vw, 3.125rem);
-  font-weight: 400;
+  font-size: clamp(1rem, 3.25vw, 1.125rem);
+  font-weight: 700;
 }
 
 p {
   margin-block: 2rem;
-  font-size: clamp(1rem, 3.3888888889vw, 1.25rem);
+  font-size: clamp(0.75rem, 3.1111111111vw, 1rem);
 }
 
 ul {
-  font-size: clamp(1rem, 3.3888888889vw, 1.25rem);
+  font-size: clamp(0.75rem, 3.1111111111vw, 1rem);
   margin-inline-start: 1.25rem;
 }
 ul li {
@@ -192,11 +192,11 @@ ul li {
 
 ol {
   margin-inline-start: 1.25rem;
-  font-size: clamp(1rem, 3.3888888889vw, 1.25rem);
+  font-size: clamp(0.75rem, 3.1111111111vw, 1rem);
 }
 ol ::marker {
   font-weight: 600;
-  font-size: clamp(1rem, 3.3888888889vw, 1.25rem);
+  font-size: clamp(0.75rem, 3.1111111111vw, 1rem);
 }
 ol li {
   margin-block: 1rem;
@@ -210,7 +210,7 @@ ol ul li {
 }
 
 strong {
-  font-size: clamp(1rem, 3.3888888889vw, 1.25rem);
+  font-size: clamp(0.75rem, 3.1111111111vw, 1rem);
 }
 
 .banner {
@@ -274,7 +274,7 @@ strong {
   align-content: center;
 }
 .imgWrapper img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -284,7 +284,7 @@ strong {
 }
 @media (min-width: 62.5rem) {
   .historicalGrid {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 4fr 5fr;
   }
 }
 @media (max-width: 62.5rem) {
@@ -306,7 +306,6 @@ strong {
 .originGrid .txtWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 2rem;
 }
 .originGrid .txtWrapper p {
@@ -321,7 +320,7 @@ strong {
 
 .h1.boldsmallcenter {
   font-weight: 700;
-  font-size: clamp(1.75rem, 4.6388888889vw, 2.375rem);
+  font-size: clamp(1rem, 3.25vw, 1.125rem);
   text-align: center;
 }
 
@@ -482,7 +481,7 @@ ol.moreInside ul {
   text-align: center;
 }
 .orientalistGrid p {
-  font-size: clamp(1.5rem, 4.7777777778vw, 2.5rem);
+  font-size: clamp(1rem, 3.25vw, 1.125rem);
 }
 
 /*# sourceMappingURL=styles.css.map */
