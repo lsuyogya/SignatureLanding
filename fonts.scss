@@ -1,6 +1,13 @@
 $font-path: "./assets/fonts";
 
 @font-face {
+  font-family: "Frutiger LT Arabic 55 Roman";
+  src: url("#{$font-path}/FrutigerLTArabic-55Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Lato";
   src: url("#{$font-path}/Lato-Black.ttf") format("truetype");
   font-weight: 900;

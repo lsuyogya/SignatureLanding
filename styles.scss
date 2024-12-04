@@ -14,7 +14,6 @@ $breakoutMaxWidth: calc(1400rem / 16);
 $mobileBreakpoint: calc(1000rem / 16);
 
 :root {
-  font-family: Lato;
   --colorLight: #fff;
   --colorLightGrey: #8c9597;
   --colorDark: #000;
@@ -27,6 +26,13 @@ $mobileBreakpoint: calc(1000rem / 16);
   line-height: 1.5;
   @media (max-width: 1000px) {
     --sectionGap: 2rem;
+  }
+}
+
+body {
+  font-family: Lato;
+  [lang="ar"] & {
+    font-family: "Frutiger LT Arabic 55 Roman";
   }
 }
 
@@ -305,6 +311,10 @@ strong {
       img {
         height: 100%;
         object-fit: cover;
+      }
+      [dir="rtl"] & {
+        right: unset;
+        left: -25%;
       }
     }
   }
