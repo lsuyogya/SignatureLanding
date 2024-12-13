@@ -84,7 +84,7 @@
 body {
   font-family: Lato;
 }
-[lang=ar] body {
+[lang=ar] body, body[lang=ar] {
   font-family: "Frutiger LT Arabic 55 Roman";
 }
 

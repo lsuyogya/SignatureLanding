@@ -31,7 +31,8 @@ $mobileBreakpoint: calc(1000rem / 16);
 
 body {
   font-family: Lato;
-  [lang="ar"] & {
+  [lang="ar"] &,
+  &[lang="ar"] {
     font-family: "Frutiger LT Arabic 55 Roman";
   }
 }
