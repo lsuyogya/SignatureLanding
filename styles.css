@@ -94,6 +94,12 @@ body {
   margin: 0;
 }
 
+img,
+svg,
+video {
+  display: block;
+}
+
 .mainGrid {
   --padding-inline: 2rem;
   --content-max-width: 68.75rem;
@@ -108,6 +114,7 @@ body {
   );
   --fullWidth-size: minmax(calc(var(--padding-inline) / 2), 1fr);
   grid-template-columns: [fullWidth-start] var(--fullWidth-size) [breakout-start] minmax(var(--breakout-min-width), var(--breakout-size)) [content-start] calc(var(--content-size)) [content-end] minmax(var(--breakout-min-width), var(--breakout-size)) [breakout-end] var(--fullWidth-size) [fullWidth-end];
+  grid-auto-rows: max-content;
   display: grid;
 }
 
@@ -133,6 +140,16 @@ body {
   }
 }
 
+.content-breakout {
+  grid-column: content;
+}
+@media (min-width: 87.5rem) {
+  .content-breakout {
+    grid-column-start: content-start;
+    grid-column-end: breakout-end;
+  }
+}
+
 .breakout-content {
   grid-column: breakout;
 }
@@ -144,25 +161,42 @@ body {
 }
 
 .contentEnd-fullWidth {
-  grid-column: content;
+  visibility: hidden;
+  grid-column: breakout;
 }
 @media (min-width: 87.5rem) {
   .contentEnd-fullWidth {
+    visibility: visible;
     grid-column-start: content-end;
     grid-column-end: fullWidth-end;
   }
 }
 
 .fullWidth-contentStart {
-  grid-column-start: fullWidth-start;
-  grid-column-end: content-start;
-  grid-template-columns: subgrid;
+  visibility: hidden;
+  grid-column: breakout;
+}
+@media (min-width: 87.5rem) {
+  .fullWidth-contentStart {
+    visibility: visible;
+    grid-column-start: fullWidth-start;
+    grid-column-end: content-start;
+  }
 }
 
 .fullWidth-content {
   grid-column: fullWidth;
   grid-template-columns: subgrid;
   display: grid;
+}
+.fullWidth-content.mob-content {
+  grid-column: content;
+}
+@media (min-width: 87.5rem) {
+  .fullWidth-content.mob-content {
+    grid-column-start: fullWidth-start;
+    grid-column-end: content-end;
+  }
 }
 @media (min-width: 87.5rem) {
   .fullWidth-content {
@@ -290,7 +324,7 @@ strong {
 }
 @media (max-width: 768px) {
   .iframeContainer iframe {
-    top: -270%;
+    top: -250%;
     width: 275vh;
     height: 600%;
   }
@@ -420,6 +454,16 @@ strong {
   }
 }
 
+.grid-1-3 {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 62.5rem) {
+  .grid-1-3 {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
 .grid-2-1 {
   display: grid;
   gap: 2rem;
@@ -430,6 +474,16 @@ strong {
   }
 }
 
+.grid-3-1 {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 62.5rem) {
+  .grid-3-1 {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
 .grid-3-2 {
   display: grid;
   gap: 2rem;
@@ -437,6 +491,16 @@ strong {
 @media (min-width: 62.5rem) {
   .grid-3-2 {
     grid-template-columns: 3fr 2fr;
+  }
+}
+
+.grid-3-4 {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 62.5rem) {
+  .grid-3-4 {
+    grid-template-columns: 3fr 4fr;
   }
 }
 
@@ -520,6 +584,44 @@ ol.moreInside ul {
 }
 .orientalistGrid p {
   font-size: clamp(1rem, 3.25vw, 1.125rem);
+}
+
+.double-row {
+  grid-row: 1/span 2;
+}
+
+.row-1 {
+  grid-row: 1;
+}
+
+.row-2 {
+  grid-row: 2;
+}
+
+.-z-1 {
+  z-index: -1;
+}
+
+.mainGrid:has(> .bgDifferentGrey) .paddingTop {
+  padding-top: 6rem;
+}
+
+.content-end {
+  align-content: end;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 62.5rem) {
+  .mobile-order-1 {
+    order: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
