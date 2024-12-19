@@ -221,7 +221,7 @@ main > section:first-of-type {
 }
 
 .h1 {
-  font-size: clamp(1.5rem, 4.2222222222vw, 2rem);
+  font-size: clamp(1.125rem, 3.6666666667vw, 1.5rem);
   font-weight: 700;
 }
 [lang=ar] .h1 {
@@ -381,7 +381,7 @@ strong {
 
 .h1.boldsmallcenter {
   font-weight: 700;
-  font-size: clamp(1.5rem, 4.2222222222vw, 2rem);
+  font-size: clamp(1.125rem, 3.6666666667vw, 1.5rem);
   text-align: center;
 }
 [lang=ar] .h1.boldsmallcenter {
