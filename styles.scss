@@ -154,7 +154,7 @@ main > section:first-of-type {
 }
 
 .h1 {
-  @include ScalingFont(18, 16, 1440);
+  @include ScalingFont(32, 24, 1440);
   font-weight: 700;
   [lang='ar'] & {
     @include ScalingFont(38, 24, 1440);
