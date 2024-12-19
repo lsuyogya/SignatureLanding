@@ -309,7 +309,8 @@ strong {
 
 .h1.boldsmallcenter {
   font-weight: 700;
-  @include ScalingFont(18, 16, 1440);
+  // @include ScalingFont(18, 16, 1440);
+  @include ScalingFont(32, 24, 1440);
   text-align: center;
   [lang='ar'] & {
     @include ScalingFont(38, 24, 1440);

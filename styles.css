@@ -381,7 +381,7 @@ strong {
 
 .h1.boldsmallcenter {
   font-weight: 700;
-  font-size: clamp(1rem, 3.25vw, 1.125rem);
+  font-size: clamp(1.5rem, 4.2222222222vw, 2rem);
   text-align: center;
 }
 [lang=ar] .h1.boldsmallcenter {
